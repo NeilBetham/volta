@@ -236,18 +236,18 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="cHs-zq-707"/>
                                 </constraints>
-                                <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" refusesFirstResponder="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" placeholderString="0.0" usesSingleLineMode="YES" id="ZeZ-Rq-zSw">
+                                <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" refusesFirstResponder="YES" sendsActionOnEndEditing="YES" state="on" alignment="right" placeholderString="0.0" drawsBackground="YES" usesSingleLineMode="YES" id="ZeZ-Rq-zSw">
                                     <font key="font" metaFont="system" size="80"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0OK-cG-5mT">
                                 <rect key="frame" x="265" y="110" width="165" height="100"/>
-                                <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" refusesFirstResponder="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" placeholderString="0.0" allowsEditingTextAttributes="YES" usesSingleLineMode="YES" id="GOM-6S-tBq">
+                                <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" refusesFirstResponder="YES" sendsActionOnEndEditing="YES" state="on" alignment="right" placeholderString="0.0" drawsBackground="YES" allowsEditingTextAttributes="YES" usesSingleLineMode="YES" id="GOM-6S-tBq">
                                     <font key="font" metaFont="system" size="80"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Kva-5w-g0d">
@@ -266,6 +266,17 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TF2-LY-66e">
+                                <rect key="frame" x="194" y="44" width="94" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="s1i-6l-jwc">
+                                    <font key="font" metaFont="system"/>
+                                    <segments>
+                                        <segment label="Off" selected="YES"/>
+                                        <segment label="On" tag="1"/>
+                                    </segments>
+                                </segmentedCell>
+                            </segmentedControl>
                         </subviews>
                         <constraints>
                             <constraint firstItem="xO7-x2-k34" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="1gZ-y4-hdh"/>
