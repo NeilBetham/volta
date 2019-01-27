@@ -14,6 +14,10 @@
 		4D7EF86F1FEB70D8003D90D2 /* VoltaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7EF86E1FEB70D8003D90D2 /* VoltaTests.swift */; };
 		4D7EF87A1FEB70D8003D90D2 /* VoltaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7EF8791FEB70D8003D90D2 /* VoltaUITests.swift */; };
 		4D7EF88B1FEB784E003D90D2 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7EF88A1FEB784E003D90D2 /* Main.swift */; };
+		4D8FAAB221FD539400646093 /* ControlPortEnumerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8FAAB121FD539400646093 /* ControlPortEnumerator.swift */; };
+		4D8FAAB421FD634100646093 /* ORSSerial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D8FAAB321FD634100646093 /* ORSSerial.framework */; };
+		4D8FAAB521FD634100646093 /* ORSSerial.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D8FAAB321FD634100646093 /* ORSSerial.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D8FAAB921FD637700646093 /* ORSSerial.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4D8FAAB821FD637700646093 /* ORSSerial.framework.dSYM */; };
 		4DA3096C1FF1C7DE002BDE2E /* PowerSupply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA3096B1FF1C7DE002BDE2E /* PowerSupply.swift */; };
 		4DA3096E1FF1D2AC002BDE2E /* PowerSupplyUpdateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA3096D1FF1D2AC002BDE2E /* PowerSupplyUpdateDelegate.swift */; };
 		4DA309701FF1D517002BDE2E /* PowerSupplyUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA3096F1FF1D517002BDE2E /* PowerSupplyUpdate.swift */; };
@@ -37,6 +41,30 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4D8FAAB621FD634100646093 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4D8FAAB521FD634100646093 /* ORSSerial.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D8FAAB721FD634F00646093 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				4D8FAAB921FD637700646093 /* ORSSerial.framework.dSYM in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4D7EF8581FEB70D7003D90D2 /* Volta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Volta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D7EF85B1FEB70D7003D90D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +80,9 @@
 		4D7EF8791FEB70D8003D90D2 /* VoltaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoltaUITests.swift; sourceTree = "<group>"; };
 		4D7EF87B1FEB70D8003D90D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D7EF88A1FEB784E003D90D2 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		4D8FAAB121FD539400646093 /* ControlPortEnumerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPortEnumerator.swift; sourceTree = "<group>"; };
+		4D8FAAB321FD634100646093 /* ORSSerial.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ORSSerial.framework; path = Carthage/Build/Mac/ORSSerial.framework; sourceTree = "<group>"; };
+		4D8FAAB821FD637700646093 /* ORSSerial.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = ORSSerial.framework.dSYM; path = Carthage/Build/Mac/ORSSerial.framework.dSYM; sourceTree = "<group>"; };
 		4DA3096B1FF1C7DE002BDE2E /* PowerSupply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerSupply.swift; sourceTree = "<group>"; };
 		4DA3096D1FF1D2AC002BDE2E /* PowerSupplyUpdateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerSupplyUpdateDelegate.swift; sourceTree = "<group>"; };
 		4DA3096F1FF1D517002BDE2E /* PowerSupplyUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerSupplyUpdate.swift; sourceTree = "<group>"; };
@@ -63,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D8FAAB421FD634100646093 /* ORSSerial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +118,8 @@
 		4D7EF84F1FEB70D7003D90D2 = {
 			isa = PBXGroup;
 			children = (
+				4D8FAAB821FD637700646093 /* ORSSerial.framework.dSYM */,
+				4D8FAAB321FD634100646093 /* ORSSerial.framework */,
 				4D7EF85A1FEB70D7003D90D2 /* Volta */,
 				4D7EF86D1FEB70D8003D90D2 /* VoltaTests */,
 				4D7EF8781FEB70D8003D90D2 /* VoltaUITests */,
@@ -116,6 +150,7 @@
 				4D7EF8611FEB70D7003D90D2 /* Main.storyboard */,
 				4D7EF8641FEB70D7003D90D2 /* Info.plist */,
 				4D7EF8651FEB70D7003D90D2 /* Volta.entitlements */,
+				4D8FAAB121FD539400646093 /* ControlPortEnumerator.swift */,
 			);
 			path = Volta;
 			sourceTree = "<group>";
@@ -181,6 +216,8 @@
 				4D7EF8541FEB70D7003D90D2 /* Sources */,
 				4D7EF8551FEB70D7003D90D2 /* Frameworks */,
 				4D7EF8561FEB70D7003D90D2 /* Resources */,
+				4D8FAAB621FD634100646093 /* Embed Frameworks */,
+				4D8FAAB721FD634F00646093 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -239,15 +276,23 @@
 				TargetAttributes = {
 					4D7EF8571FEB70D7003D90D2 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 					4D7EF8691FEB70D8003D90D2 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 4D7EF8571FEB70D7003D90D2;
 					};
 					4D7EF8741FEB70D8003D90D2 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 4D7EF8571FEB70D7003D90D2;
 					};
@@ -304,12 +349,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DA3096E1FF1D2AC002BDE2E /* PowerSupplyUpdateDelegate.swift in Sources */,
 				4DA309701FF1D517002BDE2E /* PowerSupplyUpdate.swift in Sources */,
+				4DA3096E1FF1D2AC002BDE2E /* PowerSupplyUpdateDelegate.swift in Sources */,
 				4DA3096C1FF1C7DE002BDE2E /* PowerSupply.swift in Sources */,
 				4D7EF88B1FEB784E003D90D2 /* Main.swift in Sources */,
 				4D7EF85E1FEB70D7003D90D2 /* ViewController.swift in Sources */,
 				4DA309731FF1D7E4002BDE2E /* BK168xB.swift in Sources */,
+				4D8FAAB221FD539400646093 /* ControlPortEnumerator.swift in Sources */,
 				4D7EF85C1FEB70D7003D90D2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,14 +513,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Volta/Volta.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = Volta/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sigsegv.Volta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -482,14 +531,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Volta/Volta.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = Volta/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sigsegv.Volta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -504,7 +556,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sigsegv.VoltaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Volta.app/Contents/MacOS/Volta";
 			};
 			name = Debug;
@@ -520,7 +572,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sigsegv.VoltaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Volta.app/Contents/MacOS/Volta";
 			};
 			name = Release;
@@ -535,7 +587,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sigsegv.VoltaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = Volta;
 			};
 			name = Debug;
@@ -550,7 +602,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sigsegv.VoltaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = Volta;
 			};
 			name = Release;

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import PowerSupplyUpdate
 
 protocol PowerSupplyUpdateDelegate {
     func handle_update(update: PowerSupplyUpdate)
