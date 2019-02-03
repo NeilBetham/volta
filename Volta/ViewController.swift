@@ -75,13 +75,21 @@ class ViewController: NSViewController, PowerSupplyUpdateDelegate {
     func setup_power_supply(){
         power_supply_interface = BK168xB(selected_control_port)
         power_supply_interface?.set_update_delegate(self)
-        power_supply_interface?.set_update_time(0.5)
+        power_supply_interface?.set_update_time(1)
         power_supply_interface?.set_enable_updates()
     }
     
     func handle_update(update: PowerSupplyUpdate) {
-        voltage_control?.stringValue = String(format: "%2.2f", update.voltage)
-        current_control?.stringValue = String(format: "%2.2f", update.current)
+        let voltage_value_string = String(format: "%2.2f", update.voltage)
+        if voltage_control?.stringValue != voltage_value_string {
+            voltage_control?.stringValue = voltage_value_string
+        }
+        
+        let current_value_string = String(format: "%2.2f", update.current)
+        if current_control?.stringValue != current_value_string {
+            current_control?.stringValue = current_value_string
+        }
+
         if update.output == .On {
             output_control.selectSegment(withTag: 1)
         } else {

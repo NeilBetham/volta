@@ -37,11 +37,15 @@ class BK168xB : NSObject, PowerSupply, ORSSerialPortDelegate {
     // Event handlers
     private var delegate: PowerSupplyUpdateDelegate?
     
+    // Queues for executing commands
+    private var update_queue: DispatchQueue
+    
     // Timer for polling power supply
     private var polling_time: Float = 0.0
     private var polling_timer: Timer = Timer()
     
     init(_ device_: String) {
+        update_queue = DispatchQueue(label: "PowerSupplyUpdateQueue-\(device_)")
         super.init()
         bleh(device_)
     }
@@ -104,7 +108,7 @@ class BK168xB : NSObject, PowerSupply, ORSSerialPortDelegate {
     
     func sync() -> Bool {
         sendCommand(command: "GETS", get: true)
-        sleep(1)
+        usleep(200)
         sendCommand(command: "GETD", get: true, command_length: 9)
         return true
     }
@@ -119,8 +123,10 @@ class BK168xB : NSObject, PowerSupply, ORSSerialPortDelegate {
     
     func set_enable_updates(){
         polling_timer = Timer.scheduledTimer(withTimeInterval: TimeInterval(exactly: self.polling_time)!, repeats: true, block: { (Timer) in
-            let _ = self.sync()
-            self.sendUpdateToDelegate()
+            self.update_queue.async {
+                let _ = self.sync()
+                self.sendUpdateToDelegate()
+            }
         })
     }
     
@@ -241,7 +247,7 @@ class BK168xB : NSObject, PowerSupply, ORSSerialPortDelegate {
         case "GETD":
             let _ = parse_value_update_from_supply(resp)
         default:
-            print("\(command): \(resp)")
+            return
         }
     }
     
