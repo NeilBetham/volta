@@ -9,3 +9,8 @@
 import Foundation
 import Cocoa
 
+class MainView : NSVisualEffectView {
+    override var allowsVibrancy: Bool {
+        return true
+    }
+}
