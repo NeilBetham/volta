@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D64052D2206A3AA005B4A44 /* USBDeviceSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D64052C2206A3AA005B4A44 /* USBDeviceSwift.framework */; };
+		4D64052E2206A3AA005B4A44 /* USBDeviceSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D64052C2206A3AA005B4A44 /* USBDeviceSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D6405302206A3C0005B4A44 /* USBDeviceSwift.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4D64052F2206A3BF005B4A44 /* USBDeviceSwift.framework.dSYM */; };
 		4D7EF85C1FEB70D7003D90D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7EF85B1FEB70D7003D90D2 /* AppDelegate.swift */; };
 		4D7EF85E1FEB70D7003D90D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7EF85D1FEB70D7003D90D2 /* ViewController.swift */; };
 		4D7EF8601FEB70D7003D90D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D7EF85F1FEB70D7003D90D2 /* Assets.xcassets */; };
@@ -14,7 +17,6 @@
 		4D7EF86F1FEB70D8003D90D2 /* VoltaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7EF86E1FEB70D8003D90D2 /* VoltaTests.swift */; };
 		4D7EF87A1FEB70D8003D90D2 /* VoltaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7EF8791FEB70D8003D90D2 /* VoltaUITests.swift */; };
 		4D7EF88B1FEB784E003D90D2 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7EF88A1FEB784E003D90D2 /* Main.swift */; };
-		4D8FAAB221FD539400646093 /* ControlPortEnumerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8FAAB121FD539400646093 /* ControlPortEnumerator.swift */; };
 		4D8FAAB421FD634100646093 /* ORSSerial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D8FAAB321FD634100646093 /* ORSSerial.framework */; };
 		4D8FAAB521FD634100646093 /* ORSSerial.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D8FAAB321FD634100646093 /* ORSSerial.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D8FAAB921FD637700646093 /* ORSSerial.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4D8FAAB821FD637700646093 /* ORSSerial.framework.dSYM */; };
@@ -49,6 +51,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				4D8FAAB521FD634100646093 /* ORSSerial.framework in Embed Frameworks */,
+				4D64052E2206A3AA005B4A44 /* USBDeviceSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,6 +62,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				4D6405302206A3C0005B4A44 /* USBDeviceSwift.framework.dSYM in CopyFiles */,
 				4D8FAAB921FD637700646093 /* ORSSerial.framework.dSYM in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +70,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D64052C2206A3AA005B4A44 /* USBDeviceSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = USBDeviceSwift.framework; path = Carthage/Build/Mac/USBDeviceSwift.framework; sourceTree = "<group>"; };
+		4D64052F2206A3BF005B4A44 /* USBDeviceSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = USBDeviceSwift.framework.dSYM; path = Carthage/Build/Mac/USBDeviceSwift.framework.dSYM; sourceTree = "<group>"; };
 		4D7EF8581FEB70D7003D90D2 /* Volta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Volta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D7EF85B1FEB70D7003D90D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D7EF85D1FEB70D7003D90D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,7 +86,6 @@
 		4D7EF8791FEB70D8003D90D2 /* VoltaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoltaUITests.swift; sourceTree = "<group>"; };
 		4D7EF87B1FEB70D8003D90D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D7EF88A1FEB784E003D90D2 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
-		4D8FAAB121FD539400646093 /* ControlPortEnumerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPortEnumerator.swift; sourceTree = "<group>"; };
 		4D8FAAB321FD634100646093 /* ORSSerial.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ORSSerial.framework; path = Carthage/Build/Mac/ORSSerial.framework; sourceTree = "<group>"; };
 		4D8FAAB821FD637700646093 /* ORSSerial.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = ORSSerial.framework.dSYM; path = Carthage/Build/Mac/ORSSerial.framework.dSYM; sourceTree = "<group>"; };
 		4DA3096B1FF1C7DE002BDE2E /* PowerSupply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerSupply.swift; sourceTree = "<group>"; };
@@ -95,6 +100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D8FAAB421FD634100646093 /* ORSSerial.framework in Frameworks */,
+				4D64052D2206A3AA005B4A44 /* USBDeviceSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +124,8 @@
 		4D7EF84F1FEB70D7003D90D2 = {
 			isa = PBXGroup;
 			children = (
+				4D64052F2206A3BF005B4A44 /* USBDeviceSwift.framework.dSYM */,
+				4D64052C2206A3AA005B4A44 /* USBDeviceSwift.framework */,
 				4D8FAAB821FD637700646093 /* ORSSerial.framework.dSYM */,
 				4D8FAAB321FD634100646093 /* ORSSerial.framework */,
 				4D7EF85A1FEB70D7003D90D2 /* Volta */,
@@ -150,7 +158,6 @@
 				4D7EF8611FEB70D7003D90D2 /* Main.storyboard */,
 				4D7EF8641FEB70D7003D90D2 /* Info.plist */,
 				4D7EF8651FEB70D7003D90D2 /* Volta.entitlements */,
-				4D8FAAB121FD539400646093 /* ControlPortEnumerator.swift */,
 			);
 			path = Volta;
 			sourceTree = "<group>";
@@ -355,7 +362,6 @@
 				4D7EF88B1FEB784E003D90D2 /* Main.swift in Sources */,
 				4D7EF85E1FEB70D7003D90D2 /* ViewController.swift in Sources */,
 				4DA309731FF1D7E4002BDE2E /* BK168xB.swift in Sources */,
-				4D8FAAB221FD539400646093 /* ControlPortEnumerator.swift in Sources */,
 				4D7EF85C1FEB70D7003D90D2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,7 +457,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -502,7 +508,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

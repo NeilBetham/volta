@@ -20,7 +20,6 @@ class BK168xB : NSObject, PowerSupply, ORSSerialPortDelegate {
         didSet {
             device.baudRate = 9600
             device.delegate = self
-            device.shouldEchoReceivedData = true
             device.open()
             print("Opening: \(device.path)")
         }
@@ -33,9 +32,14 @@ class BK168xB : NSObject, PowerSupply, ORSSerialPortDelegate {
     private var voltage_value: Float = 0
     private var current_value: Float = 0
     private var supply_mode: PowerSupplyStatus = .ConstantVoltage
+    private var output_status: PowerSupplyOutputStatus = .On
     
     // Event handlers
     private var delegate: PowerSupplyUpdateDelegate?
+    
+    // Timer for polling power supply
+    private var polling_time: Float = 0.0
+    private var polling_timer: Timer = Timer()
     
     init(_ device_: String) {
         super.init()
@@ -59,6 +63,22 @@ class BK168xB : NSObject, PowerSupply, ORSSerialPortDelegate {
     func set_current(set_point: Float) -> Bool {
         let command = String(format: "CURR%@\r", float_to_string(convert_me: set_point))
         sendCommand(command: command, get: false)
+        return true
+    }
+    
+    func set_output_on() -> Bool {
+        output_status = .On
+        let command = "SOUT0\r"
+        sendCommand(command: command, get: false)
+        sendUpdateToDelegate()
+        return true
+    }
+    
+    func set_output_off() -> Bool {
+        output_status = .Off
+        let command = "SOUT1\r"
+        sendCommand(command: command, get: false)
+        sendUpdateToDelegate()
         return true
     }
     
@@ -91,6 +111,21 @@ class BK168xB : NSObject, PowerSupply, ORSSerialPortDelegate {
     
     func set_update_delegate(_ _delegate: PowerSupplyUpdateDelegate) {
         delegate = _delegate
+    }
+    
+    func set_update_time(_ interval: Float){
+        polling_time = interval
+    }
+    
+    func set_enable_updates(){
+        polling_timer = Timer.scheduledTimer(withTimeInterval: TimeInterval(exactly: self.polling_time)!, repeats: true, block: { (Timer) in
+            let _ = self.sync()
+            self.sendUpdateToDelegate()
+        })
+    }
+    
+    func set_disable_updates(){
+        polling_timer.invalidate()
     }
     
     private func sendCommand(command: String, get: Bool, command_length: Int = 6) {
@@ -175,7 +210,8 @@ class BK168xB : NSObject, PowerSupply, ORSSerialPortDelegate {
                     current_: self.current_value,
                     voltage_setpoint_: self.voltage_setpoint,
                     current_setpoint_: self.current_setpoint,
-                    status_: self.supply_mode
+                    status_: self.supply_mode,
+                    output_: self.output_status
                 ))
             }
         }
@@ -193,7 +229,6 @@ class BK168xB : NSObject, PowerSupply, ORSSerialPortDelegate {
     func serialPortWasOpened(_ serialPort: ORSSerialPort) {
         print("Port opened")
         connected = true
-        let _ = sync()
     }
     
     func serialPort(_ serialPort: ORSSerialPort, didReceiveResponse responseData: Data, to request: ORSSerialRequest) {
@@ -206,10 +241,8 @@ class BK168xB : NSObject, PowerSupply, ORSSerialPortDelegate {
         case "GETD":
             let _ = parse_value_update_from_supply(resp)
         default:
-            sync()
             print("\(command): \(resp)")
         }
-        sendUpdateToDelegate()
     }
     
     func serialPort(_ serialPort: ORSSerialPort, didEncounterError error: Error) {

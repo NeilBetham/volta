@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -229,23 +228,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <visualEffectView focusRingType="none" appearanceType="vibrantDark" blendingMode="behindWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="xO7-x2-k34">
+                            <visualEffectView focusRingType="none" blendingMode="behindWindow" material="underWindowBackground" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="xO7-x2-k34">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                                 <subviews>
-                                    <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TF2-LY-66e">
+                                    <segmentedControl verticalHuggingPriority="750" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TF2-LY-66e">
                                         <rect key="frame" x="193" y="18" width="94" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="s1i-6l-jwc">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="QiH-Nh-Duk"/>
+                                        </constraints>
+                                        <segmentedCell key="cell" borderStyle="border" alignment="left" tag="1" style="rounded" trackingMode="selectOne" id="s1i-6l-jwc">
                                             <font key="font" metaFont="system"/>
                                             <segments>
                                                 <segment label="Off" selected="YES"/>
                                                 <segment label="On" tag="1"/>
                                             </segments>
                                         </segmentedCell>
+                                        <connections>
+                                            <action selector="output_selector_updated:" target="XfG-lQ-9wD" id="0OA-Tg-wp2"/>
+                                        </connections>
                                     </segmentedControl>
-                                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F5V-3P-6tl">
-                                        <rect key="frame" x="139" y="226" width="204" height="25"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="F5V-3P-6tl">
+                                        <rect key="frame" x="102" y="226" width="277" height="25"/>
                                         <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="IVB-PY-s1b" id="efx-t5-qMK">
                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="menu"/>
@@ -262,6 +265,14 @@
                                         </connections>
                                     </popUpButton>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="F5V-3P-6tl" firstAttribute="centerX" secondItem="xO7-x2-k34" secondAttribute="centerX" id="4z5-Zq-Gqm"/>
+                                    <constraint firstAttribute="bottom" secondItem="TF2-LY-66e" secondAttribute="bottom" constant="20" id="PF6-sT-cdY"/>
+                                    <constraint firstItem="F5V-3P-6tl" firstAttribute="leading" secondItem="xO7-x2-k34" secondAttribute="leading" constant="104" id="WAb-fl-H6f"/>
+                                    <constraint firstItem="TF2-LY-66e" firstAttribute="centerX" secondItem="xO7-x2-k34" secondAttribute="centerX" id="efx-3G-Uxj"/>
+                                    <constraint firstAttribute="trailing" secondItem="F5V-3P-6tl" secondAttribute="trailing" constant="104" id="sBk-EL-lqv"/>
+                                    <constraint firstItem="F5V-3P-6tl" firstAttribute="top" secondItem="xO7-x2-k34" secondAttribute="top" constant="20" id="vvN-3m-aPv"/>
+                                </constraints>
                             </visualEffectView>
                             <textField verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tji-DA-EPn">
                                 <rect key="frame" x="15" y="70" width="218" height="100"/>

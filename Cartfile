@@ -1,1 +1,2 @@
 github "armadsen/ORSSerialPort" ~> 2.0.2 # Serial port interface
+github "Arti3DPlayer/USBDeviceSwift" "master" # USB Device Enumeration
