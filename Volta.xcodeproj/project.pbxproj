@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D64052D2206A3AA005B4A44 /* USBDeviceSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D64052C2206A3AA005B4A44 /* USBDeviceSwift.framework */; };
-		4D64052E2206A3AA005B4A44 /* USBDeviceSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D64052C2206A3AA005B4A44 /* USBDeviceSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4D6405302206A3C0005B4A44 /* USBDeviceSwift.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4D64052F2206A3BF005B4A44 /* USBDeviceSwift.framework.dSYM */; };
+		4D25A23E27496E42004DC0A2 /* ORSSerial.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D25A23C27496E42004DC0A2 /* ORSSerial.xcframework */; };
+		4D25A23F27496E42004DC0A2 /* ORSSerial.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D25A23C27496E42004DC0A2 /* ORSSerial.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D25A24027496E42004DC0A2 /* USBDeviceSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D25A23D27496E42004DC0A2 /* USBDeviceSwift.xcframework */; };
+		4D25A24127496E42004DC0A2 /* USBDeviceSwift.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D25A23D27496E42004DC0A2 /* USBDeviceSwift.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D7EF85C1FEB70D7003D90D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7EF85B1FEB70D7003D90D2 /* AppDelegate.swift */; };
 		4D7EF85E1FEB70D7003D90D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7EF85D1FEB70D7003D90D2 /* ViewController.swift */; };
 		4D7EF8601FEB70D7003D90D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D7EF85F1FEB70D7003D90D2 /* Assets.xcassets */; };
@@ -17,9 +18,6 @@
 		4D7EF86F1FEB70D8003D90D2 /* VoltaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7EF86E1FEB70D8003D90D2 /* VoltaTests.swift */; };
 		4D7EF87A1FEB70D8003D90D2 /* VoltaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7EF8791FEB70D8003D90D2 /* VoltaUITests.swift */; };
 		4D7EF88B1FEB784E003D90D2 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7EF88A1FEB784E003D90D2 /* Main.swift */; };
-		4D8FAAB421FD634100646093 /* ORSSerial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D8FAAB321FD634100646093 /* ORSSerial.framework */; };
-		4D8FAAB521FD634100646093 /* ORSSerial.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D8FAAB321FD634100646093 /* ORSSerial.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4D8FAAB921FD637700646093 /* ORSSerial.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4D8FAAB821FD637700646093 /* ORSSerial.framework.dSYM */; };
 		4DA3096C1FF1C7DE002BDE2E /* PowerSupply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA3096B1FF1C7DE002BDE2E /* PowerSupply.swift */; };
 		4DA3096E1FF1D2AC002BDE2E /* PowerSupplyUpdateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA3096D1FF1D2AC002BDE2E /* PowerSupplyUpdateDelegate.swift */; };
 		4DA309701FF1D517002BDE2E /* PowerSupplyUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA3096F1FF1D517002BDE2E /* PowerSupplyUpdate.swift */; };
@@ -50,8 +48,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4D8FAAB521FD634100646093 /* ORSSerial.framework in Embed Frameworks */,
-				4D64052E2206A3AA005B4A44 /* USBDeviceSwift.framework in Embed Frameworks */,
+				4D25A24127496E42004DC0A2 /* USBDeviceSwift.xcframework in Embed Frameworks */,
+				4D25A23F27496E42004DC0A2 /* ORSSerial.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,14 +60,14 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				4D6405302206A3C0005B4A44 /* USBDeviceSwift.framework.dSYM in CopyFiles */,
-				4D8FAAB921FD637700646093 /* ORSSerial.framework.dSYM in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D25A23C27496E42004DC0A2 /* ORSSerial.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ORSSerial.xcframework; path = Carthage/Build/ORSSerial.xcframework; sourceTree = "<group>"; };
+		4D25A23D27496E42004DC0A2 /* USBDeviceSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = USBDeviceSwift.xcframework; path = Carthage/Build/USBDeviceSwift.xcframework; sourceTree = "<group>"; };
 		4D64052C2206A3AA005B4A44 /* USBDeviceSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = USBDeviceSwift.framework; path = Carthage/Build/Mac/USBDeviceSwift.framework; sourceTree = "<group>"; };
 		4D64052F2206A3BF005B4A44 /* USBDeviceSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = USBDeviceSwift.framework.dSYM; path = Carthage/Build/Mac/USBDeviceSwift.framework.dSYM; sourceTree = "<group>"; };
 		4D7EF8581FEB70D7003D90D2 /* Volta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Volta.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,8 +97,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D8FAAB421FD634100646093 /* ORSSerial.framework in Frameworks */,
-				4D64052D2206A3AA005B4A44 /* USBDeviceSwift.framework in Frameworks */,
+				4D25A24027496E42004DC0A2 /* USBDeviceSwift.xcframework in Frameworks */,
+				4D25A23E27496E42004DC0A2 /* ORSSerial.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +119,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D25A23B27496E42004DC0A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D25A23C27496E42004DC0A2 /* ORSSerial.xcframework */,
+				4D25A23D27496E42004DC0A2 /* USBDeviceSwift.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4D7EF84F1FEB70D7003D90D2 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +139,7 @@
 				4D7EF86D1FEB70D8003D90D2 /* VoltaTests */,
 				4D7EF8781FEB70D8003D90D2 /* VoltaUITests */,
 				4D7EF8591FEB70D7003D90D2 /* Products */,
+				4D25A23B27496E42004DC0A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -278,12 +286,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1310;
 				ORGANIZATIONNAME = "Neil Betham";
 				TargetAttributes = {
 					4D7EF8571FEB70D7003D90D2 = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1310;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
@@ -293,13 +301,13 @@
 					};
 					4D7EF8691FEB70D8003D90D2 = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1310;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 4D7EF8571FEB70D7003D90D2;
 					};
 					4D7EF8741FEB70D8003D90D2 = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1310;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 4D7EF8571FEB70D7003D90D2;
 					};
@@ -423,6 +431,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -430,8 +439,10 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -480,6 +491,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -487,8 +499,10 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -511,7 +525,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
@@ -519,6 +534,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -526,10 +542,13 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				INFOPLIST_FILE = Volta/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sigsegv.Volta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -537,6 +556,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -544,10 +564,13 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				INFOPLIST_FILE = Volta/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sigsegv.Volta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -559,10 +582,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = VoltaTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sigsegv.VoltaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Volta.app/Contents/MacOS/Volta";
 			};
 			name = Debug;
@@ -575,10 +602,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = VoltaTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sigsegv.VoltaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Volta.app/Contents/MacOS/Volta";
 			};
 			name = Release;
@@ -590,10 +621,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = VoltaUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sigsegv.VoltaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = Volta;
 			};
 			name = Debug;
@@ -605,10 +640,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = VoltaUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sigsegv.VoltaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = Volta;
 			};
 			name = Release;

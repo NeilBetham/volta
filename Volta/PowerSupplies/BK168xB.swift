@@ -224,7 +224,7 @@ class BK168xB : NSObject, PowerSupply, ORSSerialPortDelegate {
     }
     
     
-    func serialPortWasRemoved(fromSystem serialPort: ORSSerialPort) {
+    func serialPortWasRemovedFromSystem(_ serialPort: ORSSerialPort) {
         connected = false
     }
     
